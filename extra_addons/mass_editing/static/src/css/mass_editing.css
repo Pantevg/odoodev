@@ -1,0 +1,188 @@
+#modalStyled .modal-content {
+    width: 900px;
+    margin: 0px auto;
+}
+#modalStyled table.oe_view_manager_header {
+    display: none;
+}
+#modalStyled .oe_form_group_cell .oe_horizontal_separator {
+  color: #4c4c4c;
+  font-weight: 100 !important;
+  width: fit-content;
+  font-size: 18px;
+  margin-top: 34px;
+  padding-bottom: 0px;
+  margin-bottom: -7px;
+}
+#modalStyled span.oe_form_field.oe_form_field_radio.oe_vertical > span {
+    display: flex;
+}
+#modalStyled span.oe_form_field.oe_form_field_radio.oe_vertical > span > div {
+  padding: 4px 21px 4px 12px;
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+  border: 1px solid #868686;
+  border-radius: 2px;
+  cursor: pointer;
+}
+#modalStyled span.oe_form_field.oe_form_field_radio.oe_vertical .oe_radio_input {
+  display: flex;
+  align-items: center;
+}
+#modalStyled .openerp .oe_formview input[type="radio"] {
+    border: 1px solid #a7a7a7!important;
+}
+#modalStyled .openerp .oe_formview input[type="radio"]:checked:after {
+    background-color: rgb(235, 85, 31);
+  margin-top: 3px;
+  margin-left: 3px;
+}
+#modalStyled span.oe_form_field.oe_form_field_radio.oe_vertical label {
+      cursor: pointer;
+  font-size: 10pt;
+  font-weight: 500;
+  color: black;
+}
+#modalStyled .oe_list.oe_view > .oe_list_content {
+  border: 1px solid #afafaf;
+  margin-top: -9px;
+  border-bottom: 0px;
+  border-left: 0px;
+}
+#modalStyled .oe_list.oe_view > .oe_list_content .oe_list_header_columns {
+    border-bottom: 1px solid #afafaf;
+    font-size: 11pt;
+}
+#modalStyled .oe_list.oe_view > .oe_list_content .oe_list_header_columns th {
+    font-weight: 500;
+    color: black;
+    border-right: 1px solid #afafaf;
+    height: 37px !important;
+}
+#modalStyled .oe_list.oe_view > .oe_list_content tfoot {
+  display: none;
+}
+#modalStyled label.oe_form_label {
+  color: #4c4c4c !important;
+  font-weight: 100 !important;
+  width: fit-content;
+  font-size: 18px !important;
+  padding-bottom: 0px;
+  margin-bottom: 6px;
+  padding-left: 4px !important;
+}
+#modalStyled .oe_form_group_row {
+    display: flex;
+    flex-wrap: wrap;
+}
+#modalStyled .oe_form_group_cell_label {
+    position: initial !important;
+    width: 100%;
+    margin-top: 18px;
+    margin-left: 0px !important;
+}
+#modalStyled .oe_formview .oe_form_group_cell_label + .oe_form_group_cell {
+    padding: 8px 0px 0px 0px !important;
+}
+#modalStyled .oe_formview .oe_form_group_cell_label + .oe_form_group_cell + .oe_form_group_cell {
+    padding-left: 0px;
+}
+#modalStyled .openerp .oe_formview input[type="text"] {
+  border: 1px solid #cecece !important;
+  margin-top: 4px;
+  padding: 16px 0px 16px 13px !important;
+  font-size: 10pt;
+  border-radius: 2px !important;
+}
+#modalStyled .oe_form_group_row:first-child {
+    margin-top: -29px;
+}
+#modalStyled .oe_form_field_many2one span.oe_m2o_drop_down_button {
+    top: 13px;
+    right: 3px;
+    cursor: pointer;
+}
+#modalStyled .openerp .oe_form .oe_form_field_selection select {
+  border: 1px solid #cecece !important;
+  margin-top: 4px;
+  padding: 16px 0px 16px 13px !important;
+  font-size: 10pt;
+  cursor: pointer;
+  border-radius: 3px !important;
+}
+#modalStyled table.oe_list_content tbody > tr {
+    display: none;
+}
+#modalStyled table.oe_list_content tbody > tr:first-child {
+    display: table-row;
+}
+#modalStyled table.oe_list_content tbody > tr[data-id] {
+    display: table-row;
+  border-left: 1px solid #afafaf;
+}
+#modalStyled table.oe_list_content tbody > tr[data-id] + tr:last-child {
+    display: table-row;
+}
+#modalStyled .oe_list.oe_view > .oe_list_content .oe_list_header_columns th:first-child {
+        border-left: 1px solid #afafaf;
+}
+#modalStyled .oe_list_content a {
+  font-size: 10pt;
+  font-weight: 500;
+  color: #00359e;
+  text-decoration: underline;
+}
+#modalStyled .oe_list_content a:before {
+    content: "+";
+}
+#modalStyled td.oe_form_field_one2many_list_row_add, #modalStyled td.oe_form_field_many2many_list_row_add {
+        background: none !important;
+}
+#modalStyled .oe_list_content tr > th:last-child {
+    border-left: 0px !important;
+}
+#modalStyled .oe_list_content tr > th:nth-last-child(2) {
+    border-right: 0px !important;
+    border-left: 0px;
+}
+#modalStyled .oe_list_content tr > th:nth-last-child(3) {
+    border-right: 0px !important;
+}
+
+/* Pop-up Styling */
+#modalStyled .oe_formview .oe_form_nosheet {
+    background: #efefef !important;
+}
+#modalStyled .activeButtonAS {
+    border: 1px solid rgb(235, 85, 31) !important;
+        background: #ffffff;
+}
+#modalStyled .activeButtonAS label {
+    color: #eb541f !important;
+}
+#modalStyled .oe_form_group tr.oe_form_group_row {
+    padding-bottom: 14px;
+}
+#modalStyled .oe_form_group tr.oe_form_group_row:last-child {
+    border-bottom: 0px !important;
+}
+#modalStyled img.oe_input_icon.oe_datepicker_trigger {
+    margin-top: 13px !important;
+}
+#modalStyled .oe_formview .oe_form_field:not(.oe_tags) textarea {
+    margin-top: -20px;
+    border: 1px solid #cecece !important;
+}
+#modalStyled input.field_boolean:checked {
+    border-left-color: rgba(0, 0, 0, 0) !important;
+    border-top-color: rgba(0, 0, 0, 0) !important;
+    border-bottom-color: green!important;
+    border-right-color: green!important;
+}
+#modalStyled input.field_boolean {
+    border: 1px solid #868686 !important;
+    background: white;
+    padding: 12px;
+    border-radius: 2px !important;
+}

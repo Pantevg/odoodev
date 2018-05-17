@@ -1,0 +1,19 @@
+version: '2'
+services:
+  odoo:
+    image: ykhlon/base_odoo_v8:latest
+    depends_on:
+      - db
+    ports:
+      - "8877:8069"
+    volumes:
+      - ./config:/etc/odoo
+      - ./extra_addons:/opt/odoo/extra_addons
+      - ./openerp:/usr/lib/python2.7/dist-packages/openerp
+  db:
+    image: ykhlon/base_db_9.5:latest
+    environment:
+      - POSTGRES_PASSWORD=odoo
+      - POSTGRES_USER=odoo
+    ports:
+      - "5577:5432"

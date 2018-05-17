@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+            <record id="developer_tweaks_module_form" model="ir.ui.view">
+                <field name="name">ir.module.module.form</field>
+                <field name="inherit_id" ref="base.module_form"/>
+                <field name="model">ir.module.module</field>
+                <field name="arch" type="xml">
+                    <xpath expr="//field[@name='dependencies_id']" position="replace">
+
+                        <field name="dependencies_id">
+                                    <tree string="Dependencies" colors="red:state=='uninstalled'; black:state=='installed'">
+                                        <field name="name"/>
+                                        <field name="state"/>
+                                        <field name="author"/>
+                                        <button name="dt_button_install"
+                                                type="object"
+                                                icon="STOCK_ADD"
+                                                states="uninstalled"
+                                                />
+
+                                        <button name="dt_button_immediate_upgrade"
+                                                type="object"
+                                                icon="STOCK_REFRESH"
+                                                states="installed"
+                                                />
+
+                                        <button name="dt_button_uninstall"
+                                                type="object"
+                                                icon="STOCK_STOP"
+                                                states="installed"
+                                                />
+                                    </tree>
+                                </field>
+                    </xpath>
+
+                    <notebook position="before">
+                        <br>
+                            <span class="oe_inline">
+                                <button name="%(module_tags_set_action)d" type="action" class="oe_link oe_inline" string="add tags ⇒"/>
+                                <field name="tags" class="oe_inline" widget="many2many_tags" no_lable="1"/>
+                                <button name="clear_tags" type="object" class="oe_link oe_inline" string="⇐ clear tags"/>
+                            </span>
+                        </br>
+                    </notebook>
+
+                    <notebook position="inside">
+                        <page string="Parent informations">
+                            <separator string="Direct Parent Installed Modules" colspan="2"/>
+                            <field name="direct_installed_parent_ids" />
+                            <separator string="Direct and Indirect Installed Parent Modules" colspan="2"/>
+                            <field name="all_installed_parent_ids" />
+                        </page>
+                    </notebook>
+
+                </field>
+            </record>
+
+            <record id="developer_tweaks_module_tree" model="ir.ui.view">
+                <field name="name">ir.module.module.tree.dt</field>
+                <field name="inherit_id" ref="base.module_tree"/>
+                <field name="model">ir.module.module</field>
+                <field name="arch" type="xml">
+                         <xpath expr="//field[@name='category_id']" position="before">
+                                 <field name="tags" widget="many2many_tags" invisible="1" />
+                         </xpath>
+                         <xpath expr="//field[@name='category_id']" position="after">
+                                 <button name="button_immediate_install"
+                                                type="object"
+                                                icon="STOCK_ADD"
+                                                states="uninstalled"
+                                                />
+
+                                        <button name="button_immediate_upgrade"
+                                                type="object"
+                                                icon="STOCK_REFRESH"
+                                                states="installed"
+                                                />
+
+                                        <button name="button_uninstall"
+                                                type="object"
+                                                icon="STOCK_STOP"
+                                                states="installed"
+                                                />
+                         </xpath>
+                </field>
+            </record>
+
+            <record id="developer_tweaks_module_kanban" model="ir.ui.view">
+                <field name="name">ir.module.module.kanban.dt</field>
+                <field name="inherit_id" ref="base.module_view_kanban"/>
+                <field name="model">ir.module.module</field>
+                <field name="arch" type="xml">
+                        <xpath expr="//button[@t-if='installed']" position="replace">
+
+
+                            <button name="button_immediate_upgrade"
+                                    states="installed"
+
+                                    type="object"
+                                    >Upgrade</button>
+                            <button name="button_uninstall"
+                                    states="installed"
+
+                                    type="object"
+                                    class="oe_highlight"
+                                    >Uninstall</button>
+
+                            <button name="button_uninstall_cancel"
+                                    states="to remove"
+                                    string="Cancel Uninstall"
+                                    type="object">Cancel Uninstall</button>
+                            <button name="button_upgrade_cancel"
+                                    states="to upgrade"
+                                    string="Cancel Upgrade"
+                                    type="object"
+                                    >Cancel Upgrade</button>
+                            <button name="button_install_cancel"
+                                    states="to install"
+                                    string="Cancel Install"
+                                    type="object">Cancel Install</button>
+                        </xpath>
+                </field>
+            </record>
+
+            <record id="tags_search_view" model="ir.ui.view">
+                <field name="name">tags_search_view</field>
+                <field name="model">ir.module.module</field>
+                <field name="inherit_id" ref="base.view_module_filter"></field>
+                <field name="arch" type="xml">
+                        <field name="name" position="after">
+                            <field name="tags"/>
+                        </field>
+                </field>
+            </record>
+
+    </data>
+</openerp>

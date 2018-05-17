@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+          <record id="study_form" model="ir.ui.view">
+                <field name="name">study_form</field>
+                <field name="model">study.study</field>
+                <field name="arch" type="xml">
+                    <form string="First module">
+                        <sheet>
+                            <field name="name"/>
+                        </sheet>
+                    </form>
+                </field>
+          </record>
+
+          <record id="study_list" model="ir.ui.view">
+                    <field name="name">study_list</field>
+                    <field name="model">study.study</field>
+                    <field name="arch" type="xml">
+                        <tree string="First">
+                            <field name="id"/>
+                            <field name="name"/>
+                        </tree>
+                    </field>
+          </record>
+
+          <record id="study_search" model="ir.ui.view">
+                    <field name="name">study_search</field>
+                    <field name="model">study.study</field>
+                    <field name="arch" type="xml">
+                        <search string="Name">
+                            <field name="name"/>
+                        </search>
+                    </field>
+          </record>
+
+          <record id="study_action" model="ir.actions.act_window">
+                    <field name="name">Study First Module</field>
+                    <field name="res_model">study.study</field>
+                    <field name="view_mode">tree,form</field>
+          </record>
+    </data>
+</openerp>

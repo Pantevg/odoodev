@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<openerp>
+    <data>
+
+        <menuitem id="lesson_main_menu" parent="" sequence="0" name="Lesson Odoo Course"/>
+
+            <menuitem id="lesson_menu"
+                      parent="lesson_main_menu"
+                      sequence="10"
+                      name="Lesson Modules"/>
+
+                <menuitem action="lesson_action"
+                          id="lesson_first_menu"
+                          parent="lesson_menu"
+                          sequence="10"
+                          name="Lesson First Module"/>
+    </data>
+</openerp>

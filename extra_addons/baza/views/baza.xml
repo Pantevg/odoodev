@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+          <record id="baza_form" model="ir.ui.view">
+                <field name="name">baza_form</field>
+                <field name="model">baza.baza</field>
+                <field name="arch" type="xml">
+                    <form string="Baza">
+                        <sheet>
+                            <group>
+                                <field name="question"/>
+                                <field name="category"/>
+                                <field name="answer"/>
+                                <field name="date_article"/>
+                                <field name="actual" />
+                            </group>
+                        </sheet>
+                    </form>
+                </field>
+          </record>
+
+          <record id="baza_list" model="ir.ui.view">
+                    <field name="name">baza_list</field>
+                    <field name="model">baza.baza</field>
+                    <field name="arch" type="xml">
+                        <tree string="Baza">
+                            <field name="date_article"/>
+                            <field name="question"/>
+                            <field name="category"/>
+                        </tree>
+                    </field>
+          </record>
+
+          <record id="baza_search" model="ir.ui.view">
+                    <field name="name">baza_search</field>
+                    <field name="model">baza.baza</field>
+                    <field name="arch" type="xml">
+                        <search string="Question">
+                            <field name="question"/>
+                            <field name="category"/>
+                        </search>
+                    </field>
+          </record>
+
+          <record id="baza_action" model="ir.actions.act_window">
+                    <field name="name">Baza First Module</field>
+                    <field name="res_model">baza.baza</field>
+                    <field name="view_mode">tree,form</field>
+          </record>
+    </data>
+</openerp>

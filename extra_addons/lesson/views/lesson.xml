@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+          <record id="study_form" model="ir.ui.view">
+                <field name="name">lesson_form</field>
+                <field name="model">lesson.lesson</field>
+                <field name="arch" type="xml">
+                    <form string="First module">
+                        <sheet>
+                            <group>
+                            <field name="name"/>
+                                <field name="start_date"/>
+                                <field name="is_done"/>
+                            </group>
+                        </sheet>
+                    </form>
+                </field>
+          </record>
+
+          <record id="study_list" model="ir.ui.view">
+                    <field name="name">lesson_list</field>
+                    <field name="model">lesson.lesson</field>
+                    <field name="arch" type="xml">
+                        <tree string="First">
+                            <field name="id"/>
+                            <field name="name"/>
+                        </tree>
+                    </field>
+          </record>
+
+          <record id="lesson_search" model="ir.ui.view">
+                    <field name="name">lesson_search</field>
+                    <field name="model">lesson.lesson</field>
+                    <field name="arch" type="xml">
+                        <search string="Name">
+                            <field name="name"/>
+                        </search>
+                    </field>
+          </record>
+
+          <record id="lesson_action" model="ir.actions.act_window">
+                    <field name="name">Lesson First Module</field>
+                    <field name="res_model">lesson.lesson</field>
+                    <field name="view_mode">tree,form</field>
+          </record>
+    </data>
+</openerp>

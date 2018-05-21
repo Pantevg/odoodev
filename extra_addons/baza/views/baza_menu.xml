@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<openerp>
+    <data>
+
+        <menuitem id="baza_main_menu" parent="" sequence="0" name="Knowledge Base"/>
+
+            <menuitem id="baza_menu"
+                      parent="baza_main_menu"
+                      sequence="30"
+                      name="Knowledge Base"/>
+
+                <menuitem action="baza_action"
+                          id="baza_first_menu"
+                          parent="baza_menu"
+                          sequence="30"
+                          name="Knowledge Base"/>
+    </data>
+</openerp>
